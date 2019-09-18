@@ -21,10 +21,10 @@ public class UserDetailsImpl implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
          List<GrantedAuthority> authorities = new ArrayList<>();
 
-         this.user.getPermissionList().forEach( p -> {
-             GrantedAuthority authority = new SimpleGrantedAuthority(p);
-             authorities.add(authority);
-         });
+//         this.user.getPermissionList().forEach( p -> {
+//             GrantedAuthority authority = new SimpleGrantedAuthority(p);
+//             authorities.add(authority);
+//         });
 
          this.user.getRoleList().forEach(r -> {
              GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + r);
