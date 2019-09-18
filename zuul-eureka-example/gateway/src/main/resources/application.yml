@@ -1,0 +1,16 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: zuulserver
+
+zuul:
+  routes:
+    clinent1:
+      path: /api/demo/**
+      url:  http://localhost:8080/
+
+    client2:
+      path: /api/demo/**
+      url: http://localhost:8081/
